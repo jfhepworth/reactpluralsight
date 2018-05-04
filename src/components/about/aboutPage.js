@@ -32,6 +32,7 @@ var About = React.createClass({
 							<li>Bootstrap</li>
 						</ul>
 					</p>
+					
 				</div>
 			);
 	}
