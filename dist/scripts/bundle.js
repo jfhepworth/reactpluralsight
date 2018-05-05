@@ -50531,6 +50531,134 @@ module.exports = {
 },{}],203:[function(require,module,exports){
 "use strict";
 
+//This file is mocking a web API by hitting hard coded data.
+var entries = require('./gitHubData').entries;
+var _ = require('lodash');
+
+//This would be performed on the server in a real app. Just stubbing in.
+var _generateId = function(entry) {
+	return entry.published.toLowerCase();
+};
+
+var _clone = function(item) {
+	return JSON.parse(JSON.stringify(item)); //return cloned copy so that the item is passed by value instead of by reference
+};
+
+var GitHubApi = {
+	getAllEntries: function() {
+		return _clone(entries); 
+	},
+
+	getEntryById: function(id) {
+		var entry = _.find(entries, {id: id});
+		return _clone(entry);
+	},
+	
+	saveEntry: function(entry) {
+		//pretend an ajax call to web api is made here
+		console.log('Pretend this just saved the author to the DB via AJAX call...');
+		
+		if (entry.id) {
+			var existingAuthorIndex = _.indexOf(entries, _.find(entries, {id: author.id})); 
+			entries.splice(existingAuthorIndex, 1, author);
+		} else {
+			//Just simulating creation here.
+			//The server would generate ids for new entries in a real app.
+			//Cloning so copy returned is passed by value rather than by reference.
+			entry.id = _generateId(entry);
+			entries.push(_clone(author));
+		}
+
+		return author;
+	},
+
+	deleteEntry: function(id) {
+		console.log('Pretend this just deleted the author from the DB via an AJAX call...');
+		_.remove(entries, { id: id});
+	}
+};
+
+module.exports = GitHubApi;
+
+},{"./gitHubData":204,"lodash":4}],204:[function(require,module,exports){
+module.exports = {
+  "entries": 
+  [
+    {
+      "id": "tag:github.com,2008:PushEvent/7631352080",
+      "published": "2018-05-05T00:43:51Z",
+      "updated": "2018-05-05T00:43:51Z",
+      "link": {
+        "-type": "text/html",
+        "-rel": "alternate",
+        "href": "https://github.com/jfhepworth/bashscripts/compare/01efdfd0e0...1a4593efe4"
+      },
+      "title": {
+        "-type": "html",
+        "text": "jfhepworth pushed to master in jfhepworth/bashscripts"
+      },
+      "author": {
+        "name": "jfhepworth",
+        "uri": "https://github.com/jfhepworth"
+      },
+      "media:thumbnail": {
+        "-height": "30",
+        "-width": "30",
+        "-url": "https://avatars0.githubusercontent.com/u/38085399?s=30&v=4"
+      }
+    },
+    {
+      "id": "tag:github.com,2008:PushEvent/7629626790",
+      "published": "2018-05-04T16:42:58Z",
+      "updated": "2018-05-04T16:42:58Z",
+      "link": {
+        "-type": "text/html",
+        "-rel": "alternate",
+        "href": "https://github.com/jfhepworth/ansibleplays/compare/98ca179b38...35fd02c7ad"
+      },
+      "title": {
+        "-type": "html",
+        "text": "jfhepworth pushed to master in jfhepworth/ansibleplays"
+      },
+      "author": {
+        "name": "jfhepworth",
+        "uri": "https://github.com/jfhepworth"
+      },
+      "media:thumbnail": {
+        "-height": "30",
+        "-width": "30",
+        "-url": "https://avatars0.githubusercontent.com/u/38085399?s=30&v=4"
+      }
+    },
+    {
+      "id": "tag:github.com,2008:PushEvent/7629624204",
+      "published": "2018-05-04T16:42:24Z",
+      "updated": "2018-05-04T16:42:24Z",
+      "link": {
+        "-type": "text/html",
+        "-rel": "alternate",
+        "href": "https://github.com/jfhepworth/ansibleplays/compare/6ac65b6bd9...98ca179b38"
+      },
+      "title": {
+        "-type": "html",
+        "text": "jfhepworth pushed to master in jfhepworth/ansibleplays"
+      },
+      "author": {
+        "name": "jfhepworth",
+        "uri": "https://github.com/jfhepworth"
+      },
+      "media:thumbnail": {
+        "-height": "30",
+        "-width": "30",
+        "-url": "https://avatars0.githubusercontent.com/u/38085399?s=30&v=4"
+      }
+    }
+  ]
+}
+
+},{}],205:[function(require,module,exports){
+"use strict";
+
 var React = require('react');
 
 var About = React.createClass({displayName: "About",
@@ -50570,7 +50698,7 @@ var About = React.createClass({displayName: "About",
 
 module.exports = About
 
-},{"react":200}],204:[function(require,module,exports){
+},{"react":200}],206:[function(require,module,exports){
 var React 			= require('react');
 var Header 			= require('./common/header');
 var RouteHandler 	= require('react-router').RouteHandler;
@@ -50592,7 +50720,7 @@ var App = React.createClass({displayName: "App",
 
 module.exports = App;
 
-},{"./common/header":207,"jquery":3,"react":200,"react-router":30}],205:[function(require,module,exports){
+},{"./common/header":209,"jquery":3,"react":200,"react-router":30}],207:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -50630,7 +50758,7 @@ var AuthorList = React.createClass({displayName: "AuthorList",
 
 module.exports = AuthorList;
 
-},{"react":200}],206:[function(require,module,exports){
+},{"react":200}],208:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -50662,7 +50790,7 @@ var AuthorPage = React.createClass({displayName: "AuthorPage",
 
 module.exports = AuthorPage;
 
-},{"../../api/authorApi":201,"./authorList":205,"react":200}],207:[function(require,module,exports){
+},{"../../api/authorApi":201,"./authorList":207,"react":200}],209:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -50680,6 +50808,7 @@ var Header = React.createClass({displayName: "Header",
               React.createElement("ul", {className: "nav navbar-nav"}, 
                 React.createElement("li", null, React.createElement(Link, {to: "app"}, "Home")), 
                 React.createElement("li", null, React.createElement(Link, {to: "authors"}, "Authors")), 
+                React.createElement("li", null, React.createElement(Link, {to: "githubentries"}, "GitHub Entries")), 
                 React.createElement("li", null, React.createElement(Link, {to: "about"}, "About"))
               )
           )
@@ -50689,7 +50818,77 @@ var Header = React.createClass({displayName: "Header",
 });
 
 module.exports = Header;
-},{"react":200,"react-router":30}],208:[function(require,module,exports){
+},{"react":200,"react-router":30}],210:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var GitHubEntryList = React.createClass({displayName: "GitHubEntryList",
+	propTypes: {
+		entries: React.PropTypes.array.isRequired
+	},
+
+	render: function() {
+		var createEntryRow = function(entry) {
+			return (
+				React.createElement("tr", {key: entry.id}, 
+					React.createElement("td", null, React.createElement("a", {href: "/#githubentries/" + entry.id}, entry.id)), 
+					React.createElement("td", null, entry.title.text, " ", entry.link.href)
+				)
+			);
+		};
+
+		return (
+			React.createElement("div", null, 
+				React.createElement("table", {className: "table"}, 
+					React.createElement("thead", null, 
+						React.createElement("th", null, "ID"), 
+						React.createElement("th", null, "Name")
+					), 
+					React.createElement("tbody", null, 
+						this.props.entries.map(createEntryRow, this)
+					)
+				)
+			)
+		);
+	}
+});
+
+module.exports = GitHubEntryList;
+
+},{"react":200}],211:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var GitHubApi = require('../../api/gitHubApi');
+var GitHubEntryList = require('./gitHubEntryList');
+
+var GitHubEntryPage = React.createClass({displayName: "GitHubEntryPage",
+	getInitialState: function() {
+		return {
+			entries: []
+		};
+	},
+
+	componentDidMount: function() {
+		if (this.isMounted()) {
+			this.setState({ entries: GitHubApi.getAllEntries() });
+		}
+	},
+
+	render: function() {
+		return (
+			React.createElement("div", null, 
+				React.createElement("h1", null, "entries"), 
+				React.createElement(GitHubEntryList, {entries: this.state.entries})				
+			)
+		);
+	}
+});
+
+module.exports = GitHubEntryPage;
+
+},{"../../api/gitHubApi":203,"./gitHubEntryList":210,"react":200}],212:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -50710,7 +50909,7 @@ var Home = React.createClass({displayName: "Home",
 
 module.exports = Home;
 
-},{"react":200,"react-router":30}],209:[function(require,module,exports){
+},{"react":200,"react-router":30}],213:[function(require,module,exports){
  "use strict";
 
 var React = require('react');
@@ -50730,7 +50929,7 @@ var NotFoundPage = React.createClass({displayName: "NotFoundPage",
 
 module.exports = NotFoundPage;
 
-},{"react":200,"react-router":30}],210:[function(require,module,exports){
+},{"react":200,"react-router":30}],214:[function(require,module,exports){
 "use strict";
 
 var React 	= require('react');
@@ -50741,7 +50940,7 @@ Router.run(routes, function(Handler){
 	React.render(React.createElement(Handler, null), document.getElementById('app'));
 });
 
-},{"./routes":211,"react":200,"react-router":30}],211:[function(require,module,exports){
+},{"./routes":215,"react":200,"react-router":30}],215:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -50756,6 +50955,7 @@ var routes = (
   React.createElement(Route, {name: "app", path: "/", handler: require('./components/app')}, 
     React.createElement(DefaultRoute, {handler: require('./components/homePage')}), 
     React.createElement(Route, {name: "authors", handler: require('./components/authors/authorPage')}), 
+    React.createElement(Route, {name: "githubentries", handler: require('./components/github/githubEntryPage')}), 
     React.createElement(Route, {name: "about", handler: require('./components/about/aboutPage')}), 
   	React.createElement(NotFoundRoute, {handler: require('./components/notFoundPage')}), 
   	React.createElement(Redirect, {from: "about-us", to: "about"}), 
@@ -50766,4 +50966,4 @@ var routes = (
 
 module.exports = routes;
 
-},{"./components/about/aboutPage":203,"./components/app":204,"./components/authors/authorPage":206,"./components/homePage":208,"./components/notFoundPage":209,"react":200,"react-router":30}]},{},[210]);
+},{"./components/about/aboutPage":205,"./components/app":206,"./components/authors/authorPage":208,"./components/github/githubEntryPage":211,"./components/homePage":212,"./components/notFoundPage":213,"react":200,"react-router":30}]},{},[214]);
