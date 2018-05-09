@@ -11,7 +11,7 @@ var GitHubEntryList = React.createClass({
 		var createEntryRow = function(entry) {
 			return (
 				<tr key={entry.id}>
-					<td><a href={"/#githubentries/" + entry.id}>{entry.id}</a></td>
+					<td><a href={"/#githubentries/" + entry.id}>{entry.published}</a></td>
 					<td>{entry.title.text} {entry.link.href}</td>
 				</tr>
 			);
