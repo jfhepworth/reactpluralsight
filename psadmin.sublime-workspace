@@ -1,0 +1,248 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Autor",
+				"AuthorApi"
+			],
+			[
+				"Author",
+				"AuthorApi"
+			],
+			[
+				"manag",
+				"manageAuthorPage"
+			],
+			[
+				"l",
+				"lastName"
+			],
+			[
+				"autho",
+				"AuthorApi"
+			],
+			[
+				"i",
+				"ID"
+			],
+			[
+				"m",
+				"mainJs"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 179.0,
+		"last_filter": "Package Contro: Ins",
+		"selected_items":
+		[
+			[
+				"Package Contro: Ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 428.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/jhepworth/Documents/Pluralsight/reactflux",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin"
+	],
+	"file_history":
+	[
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/authors/manageAuthorPage.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/routes.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/authors/authorPage.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/authors/authorList.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/stores/authorStore.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/actions/authorActions.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/actions/initializeActions.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/constants/actionTypes.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/main.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/github/githubEntryPage.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/api/gitHubData.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/authors/authorForm.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/gulpfile.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/about/aboutPage.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/api/gitHubApi.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/common/header.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/github/gitHubEntryList.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/dispatcher/appDispatcher.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/psadmin/src/components/common/textInput.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/components/about/aboutPage.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/routes.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/gulperrors.log",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/components/notFoundPage.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/components/app.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/components/homePage.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/components/common/header.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/components/404.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/main.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/gulpfile.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/index.html",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/components/authors/authorList.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/components/authors/authorPage.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/api/authorApi.js",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/dist/images/puralsight.jpg",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/errorfile.txt",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/eslint.config.json",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/dist/css/bundle.css",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/src/eslint.config.json",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/dist/index.html",
+		"/Users/jhepworth/Documents/Pluralsight/reactflux/dist/scripts/bundle.js"
+	],
+	"find":
+	{
+		"height": 47.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "/Users/jhepworth/Documents/Pluralsight/reactflux"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 216.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
