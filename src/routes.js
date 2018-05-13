@@ -14,6 +14,8 @@ var routes = (
     <Route name="authors" path="author" handler={require('./components/authors/authorPage')} />
     <Route name="addAuthor" path="authors" handler={require('./components/authors/manageAuthorPage.js')} />
     <Route name="githubentries" handler={require('./components/github/githubEntryPage')} />
+    <Route name="manageAuthor" path="author/:id" handler={require('./components/authors/manageAuthorPage')} />
+    <Route name="removeAuthor" path="removeAuthor/:id" handler={require('./components/authors/manageAuthorPage')} />
     <Route name="about" handler={require('./components/about/aboutPage')} />
   	<NotFoundRoute handler={require('./components/notFoundPage')} />
   	<Redirect from="about-us" to="about"/>

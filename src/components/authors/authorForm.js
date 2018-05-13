@@ -11,7 +11,7 @@ var AuthorForm = React.createClass({
 		errors: React.PropTypes.object
 	},
 
-	render: function() {
+	render: function() { 
 		return (
 			<form>
 				<h1>Manage Author</h1>
